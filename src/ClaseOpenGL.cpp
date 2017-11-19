@@ -56,9 +56,9 @@ void ClaseOpenGL::renderizar(){
     glLoadIdentity();
     gluLookAt(cameraX ,cameraY  ,cameraZ , 0, 0,0 , 0.0, 0,fabs(cos(thetaCamera))*sin(phiCamera+0.1));
 
-      Drawarrow3D({0,0,0},{100,0,0},rojo,0.03,0.03);
+    Drawarrow3D({0,0,0},{100,0,0},rojo,0.03,0.03);
     Drawarrow3D({0,0,0},{0,100,0},verde,0.03,0.03);
-        Drawarrow3D({0,0,0},{0,0,100},azul,0.03,0.03);
+    Drawarrow3D({0,0,0},{0,0,100},azul,0.03,0.03);
 /// //////////////////////////// PARTES A AGREGAR
 SSRMS.renderizar();
 

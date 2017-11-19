@@ -227,10 +227,6 @@ glEnd();
 ///DIBUJAR EJES
 
 
-
-
-
-
 }
 
 
@@ -326,36 +322,6 @@ void Robot::AplicarTHz(float theta, vector3d d){
 theta=theta*PI/180.0;
 DefinirTHz(theta,d);
 
-}
-void Robot:: ConfigurarOrigenes(){
-
-    /*
-modelo3D *modelo;
-Matrix TH;
-TH.identity(4);
-for (int m=0;m<modelos.size();m++){
-modelo=modelos[m];
-TH=TH*THList[m];
-
-vector3d ux,uy,uz,O;
-ux=modelo->ux;
-uy=modelo->uy;
-uz=modelo->uz;
-O=modelo->O;
-
-Matrix ux4(ux,1),uy4(uy,1),uz4(uz,1),O4(O,1);
-
-ux4=TH*ux4-TH*O4;
-uy4=TH*uy4-TH*O4;
-uz4=TH*uz4-TH*O4;
-O4=TH*O4;
-modelo->ux={ux4.aij[0][0],ux4.aij[1][0],ux4.aij[2][0]};
-modelo->uy={uy4.aij[0][0],uy4.aij[1][0],uy4.aij[2][0]};
-modelo->uz={uz4.aij[0][0],uz4.aij[1][0],uz4.aij[2][0]};
-modelo->O={O4.aij[0][0],O4.aij[1][0],O4.aij[2][0]};
-
-
-}*/
 }
 
 void Robot::Drawarrow3D( vector3d A,  vector3d B, vector3d color, double cota1,double R)

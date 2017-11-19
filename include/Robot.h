@@ -31,7 +31,7 @@ Matrix THx,THy,THz,TH,THbase;
 std::vector<Matrix> THList;
 std::vector<vector3d> Origenes;
 std::vector<modelo3D*> modelos;
-void ConfigurarOrigenes();
+
 
 float theta1, theta2, theta3,theta4, theta5, theta6,theta7;
 vector3d d1,d2,d3,d4,d5,d6,d7;
@@ -39,7 +39,7 @@ private :
 void DefinirTHx(float theta, vector3d d);
 void DefinirTHy(float theta, vector3d d);
 void DefinirTHz(float theta, vector3d d);
-   void  Drawarrow3D( vector3d A,  vector3d B, vector3d color, double cota1,double R) ;
+void  Drawarrow3D( vector3d A,  vector3d B, vector3d color, double cota1,double R) ;
 
 
 };
