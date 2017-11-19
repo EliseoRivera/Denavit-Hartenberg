@@ -68,7 +68,7 @@ b4->rotarZ();
 b5->definirRz(-3.14159265);
 b5->rotarZ();
 
-b6->definirRz(3.14159265);
+b6->definirRz(-3.14159265);
 b6->rotarZ();
 
 
@@ -98,62 +98,51 @@ AplicarTHz(0,{0,0,0}); //base
 THList.push_back(THz);
 AplicarTHx(0,{0,0,0}); //base
 THList.push_back(THx);
-AplicarTHy(0,{0,0,0}); //base
-THList.push_back(THy);
 
 
 
-AplicarTHx(0,{0,0,0}); //b1
-THList.push_back(THx);
+AplicarTHz(0,{0,0,0}); //b1
+THList.push_back(THz);
 AplicarTHx(-90,d1); //b1
 THList.push_back(THx);
-AplicarTHz(0,{0,0,0}); //b1
-THList.push_back(THy);
 
 
-AplicarTHx(0,{0,0,0}); //b2
-THList.push_back(THx);
+
+AplicarTHz(0,{0,0,0}); //b2
+THList.push_back(THz);
 AplicarTHx(-90,d2); //b2
 THList.push_back(THx);
-AplicarTHy(0,{0,0,0}); //b2
-THList.push_back(THy);
+
 
 AplicarTHz(0,{0,0,0}); //b3
 THList.push_back(THz);
 AplicarTHx(0,d3); //b3
 THList.push_back(THx);
-AplicarTHz(0,{0,0,0}); //b3
-THList.push_back(THy);
 
 
-AplicarTHx(0,{0,0,0}); //b4
-THList.push_back(THx);
+AplicarTHz(0,{0,0,0}); //b4
+THList.push_back(THz);
 AplicarTHz(0,d4); //b4
 THList.push_back(THz);
-AplicarTHy(0,{0,0,0}); //b4
-THList.push_back(THy);
 
-AplicarTHx(0,{0,0,0}); //b5
-THList.push_back(THx);
+AplicarTHz(0,{0,0,0}); //b5
+THList.push_back(THz);
 AplicarTHx(-90,d5); //b5
 THList.push_back(THx);
-AplicarTHy(0,{0,0,0}); //b5
-THList.push_back(THy);
 
-AplicarTHx(0,{0,0,0}); //b6
-THList.push_back(THx);
-AplicarTHx(90,d6); //b6
-THList.push_back(THx);
-AplicarTHz(180,{0,0,0}); //b6
+
+AplicarTHz(0,{0,0,0}); //b6
 THList.push_back(THz);
-
-
-AplicarTHx(0,{0,0,0}); //gripe
+AplicarTHx(-90,d6); //b6
 THList.push_back(THx);
+
+
+
+AplicarTHz(0,{0,0,0}); //gripe
+THList.push_back(THz);
 AplicarTHx(0,d7); //gripe
 THList.push_back(THx);
-AplicarTHy(0,{0,0,0}); //gripe
-THList.push_back(THy);
+
 }
 void Robot::renderizar(){
 
@@ -161,11 +150,11 @@ void Robot::renderizar(){
 TH.resetIdentity();
 THbase.resetIdentity();
 modelo3D *model;
-int LisTcont=0;
+
 for (int m=0;m<modelos.size();m++){
 model=modelos[m];
 
- TH=TH*THList[3*m+0]*THList[3*m+1]*THList[3*m+2];
+ TH=TH*THList[2*m+0]*THList[2*m+1];
 
 
 vector3d ux,uy,uz,O;
@@ -188,9 +177,9 @@ uz={uz4.aij[0][0],uz4.aij[1][0],uz4.aij[2][0]};
 O={O4.aij[0][0],O4.aij[1][0],O4.aij[2][0]};
 
 
-       Drawarrow3D(O,O+4*ux,{1,0.1,0.2},0.03,0.1);
-   Drawarrow3D(O,O+4*uy,{.1,1,0.2},0.03,0.1);
-       Drawarrow3D(O,O+4*uz,{0.1,0.2,1},0.03,0.1);
+         Drawarrow3D(O,O+4*ux,{1,0.1,0.2},0.03,0.1);
+         Drawarrow3D(O,O+4*uy,{.1,1,0.2},0.03,0.1);
+         Drawarrow3D(O,O+4*uz,{0.1,0.2,1},0.03,0.1);
          glColor4f(fabs(cos(m*PI/modelos.size())),fabs(sin(20*(m-5)*PI/modelos.size())),0.2,0.5);
  // if (m==1){
 glEnable(GL_BLEND);
