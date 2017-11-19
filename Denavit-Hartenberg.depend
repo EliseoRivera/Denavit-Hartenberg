@@ -1,0 +1,113 @@
+# depslib dependency file v1.0
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	"ClaseOpenGL.h"
+
+1511076228 c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\include\claseopengl.h
+	<gl/gl.h>
+	<GL/GLU.h>
+	"Robot.h"
+	"modelo3D.h"
+
+1511076228 c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\include\robot.h
+	"modelo3D.h"
+	<vector>
+	<cstdlib>
+
+1511076228 c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\include\modelo3d.h
+	"Triangle3D.h"
+	"Matrix.h"
+	<fstream>
+	<iostream>
+	<gl/gl.h>
+	<GL/GLU.h>
+	<string>
+
+1511076228 c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\include\triangle3d.h
+	"vector3d.h"
+
+1511076228 c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\include\vector3d.h
+	<math.h>
+
+1511076347 c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\include\matrix.h
+	"vector3d.h"
+	<iostream>
+
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\src\claseopengl.cpp
+	"ClaseOpenGL.h"
+
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\src\matrix.cpp
+	"Matrix.h"
+
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\src\modelo3d.cpp
+	"modelo3D.h"
+	<gl/gl.h>
+	<stdint.h>
+
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\src\robot.cpp
+	"Robot.h"
+
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\src\triangle3d.cpp
+	"Triangle3D.h"
+
+1511076228 source:c:\users\shabana\desktop\claseopengl-14-11-2017 - 01 (2)\denavit-hartenberg-master-master\src\vector3d.cpp
+	"vector3d.h"
+	<iostream>
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\main.cpp
+	<windows.h>
+	<gl/gl.h>
+	"ClaseOpenGL.h"
+
+1511076456 c:\users\shabana\desktop\denavit-hartenberg-master-master-master\include\claseopengl.h
+	<gl/gl.h>
+	<GL/GLU.h>
+	"Robot.h"
+	"modelo3D.h"
+
+1511076456 c:\users\shabana\desktop\denavit-hartenberg-master-master-master\include\robot.h
+	"modelo3D.h"
+	<vector>
+	<cstdlib>
+
+1511076456 c:\users\shabana\desktop\denavit-hartenberg-master-master-master\include\modelo3d.h
+	"Triangle3D.h"
+	"Matrix.h"
+	<fstream>
+	<iostream>
+	<gl/gl.h>
+	<GL/GLU.h>
+	<string>
+
+1511076456 c:\users\shabana\desktop\denavit-hartenberg-master-master-master\include\triangle3d.h
+	"vector3d.h"
+
+1511076456 c:\users\shabana\desktop\denavit-hartenberg-master-master-master\include\vector3d.h
+	<math.h>
+
+1511076456 c:\users\shabana\desktop\denavit-hartenberg-master-master-master\include\matrix.h
+	"vector3d.h"
+	<iostream>
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\src\claseopengl.cpp
+	"ClaseOpenGL.h"
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\src\matrix.cpp
+	"Matrix.h"
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\src\modelo3d.cpp
+	"modelo3D.h"
+	<gl/gl.h>
+	<stdint.h>
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\src\robot.cpp
+	"Robot.h"
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\src\triangle3d.cpp
+	"Triangle3D.h"
+
+1511076456 source:c:\users\shabana\desktop\denavit-hartenberg-master-master-master\src\vector3d.cpp
+	"vector3d.h"
+	<iostream>
+
