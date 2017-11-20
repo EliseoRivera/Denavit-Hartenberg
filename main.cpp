@@ -126,7 +126,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
         case WM_KEYDOWN:
         {
-                Matrix P({0,0,2.5},1);
+                Matrix P({0,0,0},1);
     ( Miclase->SSRMS.TH*P).mostrar();
             switch (wParam)
             {
@@ -152,13 +152,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 break;
 
 
-          case 'F':
-
+                case 'F':
                 Miclase->SSRMS.theta5=Miclase->SSRMS.theta5+dtheta;
                 Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta5, {0,0,6});    //b5
                 Miclase->SSRMS.THList[10]=Miclase->SSRMS.THz;
-
-
                 break;
 
                      case 'H':
@@ -170,13 +167,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
                 break;
 
-    case 'V':
-
+                case 'V':
                 Miclase->SSRMS.theta6=Miclase->SSRMS.theta6+dtheta;
                 Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta6, {0,0,6});     //b6
                 Miclase->SSRMS.THList[12]=Miclase->SSRMS.THz;
-
-
                 break;
 
                     case 'N':
@@ -185,8 +179,8 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta6,{0,0,6});      //b6
                 Miclase->SSRMS.THList[12]=Miclase->SSRMS.THz;
                 break;
-                              case 'G':
 
+                case 'G':
                 Miclase->SSRMS.theta7=Miclase->SSRMS.theta7-dtheta;
                 Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta7, {0,0,0});     //b7, efector final
                 Miclase->SSRMS.THList[14]=Miclase->SSRMS.THz;
