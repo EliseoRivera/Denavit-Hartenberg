@@ -12,7 +12,7 @@ void ClaseOpenGL::inicializar(){
 SSRMS.inicializar();///cargar modelos
 SSRMS.configurarTH();///Posiciones de las piezas
     /////Camera
-Rcamera=40;
+Rcamera=50;
 phiCamera=PI/3.0;
 thetaCamera=PI/4.0;
 camerafactor=0.005;

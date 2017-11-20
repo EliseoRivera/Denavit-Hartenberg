@@ -197,8 +197,8 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
           case 97:
 
                 Miclase->SSRMS.theta1=Miclase->SSRMS.theta1+dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta1, {0,0,0});
-             Miclase->SSRMS.THList[2]=Miclase->SSRMS.THz;
+                Miclase->SSRMS.AplicarTHz(Miclase->SSRMS.theta1, {0,0,0});
+                Miclase->SSRMS.THList[2]=Miclase->SSRMS.THz;
 
                 break;
             case 99:

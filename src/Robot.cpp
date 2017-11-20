@@ -16,7 +16,7 @@ int d=4;
   d4={12,0,1};
   d5={0,0,6};
   d6={0,0,6};
-  d7={0,0,0.5};
+  d7={0,0,0.0};
     //ctor
 }
 
@@ -99,26 +99,20 @@ THList.push_back(THz);
 AplicarTHx(0,{0,0,0}); //base
 THList.push_back(THx);
 
-
-
 AplicarTHz(0,{0,0,0}); //b1
 THList.push_back(THz);
 AplicarTHx(-90,d1); //b1
 THList.push_back(THx);
-
-
 
 AplicarTHz(0,{0,0,0}); //b2
 THList.push_back(THz);
 AplicarTHx(-90,d2); //b2
 THList.push_back(THx);
 
-
 AplicarTHz(0,{0,0,0}); //b3
 THList.push_back(THz);
 AplicarTHx(0,d3); //b3
 THList.push_back(THx);
-
 
 AplicarTHz(0,{0,0,0}); //b4
 THList.push_back(THz);
@@ -130,13 +124,10 @@ THList.push_back(THz);
 AplicarTHx(-90,d5); //b5
 THList.push_back(THx);
 
-
 AplicarTHz(0,{0,0,0}); //b6
 THList.push_back(THz);
 AplicarTHx(-90,d6); //b6
 THList.push_back(THx);
-
-
 
 AplicarTHz(0,{0,0,0}); //gripe
 THList.push_back(THz);
@@ -152,10 +143,10 @@ TH.resetIdentity();
 modelo3D *model;
 //modelos.size()
 for (int m=0;m<modelos.size();m++){
-        if (m==7){
+        //if (m==7){
 model=modelos[m];
 
- //TH=TH*THList[2*m+0]*THList[2*m+1];
+ TH=TH* THList[2*m+0]*THList[2*m+1];
 
 
 vector3d ux,uy,uz,O;
@@ -228,7 +219,7 @@ glEnd();
 ///DIBUJAR EJES
 
 
-}
+//}
 }
 
 }
@@ -238,27 +229,26 @@ glEnd();
 
 void Robot::DefinirTHx(float dtheta, vector3d d){
 
-
 THx.aij[0][0]=1;
 THx.aij[0][1]=0;
 THx.aij[0][2]=0;
+THx.aij[0][3]=d.x;
 
 THx.aij[1][0]=0;
 THx.aij[1][1]=cos(dtheta);
 THx.aij[1][2]=-sin(dtheta);
+THx.aij[1][3]=d.y;
 
 THx.aij[2][0]=0;
 THx.aij[2][1]=sin(dtheta);
 THx.aij[2][2]=cos(dtheta);
+THx.aij[2][3]=d.z;
 
 THx.aij[3][0]=0;
 THx.aij[3][1]=0;
 THx.aij[3][2]=0;
 THx.aij[3][3]=1;
 
-THx.aij[0][3]=d.x;
-THx.aij[1][3]=d.y;
-THx.aij[2][3]=d.z;
 }
 void Robot::DefinirTHy(float dtheta, vector3d d){
 
@@ -289,23 +279,23 @@ void Robot::DefinirTHz(float dtheta, vector3d d){
 THz.aij[0][0]=cos(dtheta);
 THz.aij[0][1]=-sin(dtheta);
 THz.aij[0][2]=0;
+THz.aij[0][3]=d.x;
 
 THz.aij[1][0]=sin(dtheta);
 THz.aij[1][1]=cos(dtheta);
 THz.aij[1][2]=0;
+THz.aij[1][3]=d.y;
 
 THz.aij[2][0]=0;
 THz.aij[2][1]=0;
 THz.aij[2][2]=1;
+THz.aij[2][3]=d.z;
 
 THz.aij[3][0]=0;
 THz.aij[3][1]=0;
 THz.aij[3][2]=0;
 THz.aij[3][3]=1;
 
-THz.aij[0][3]=d.x;
-THz.aij[1][3]=d.y;
-THz.aij[2][3]=d.z;
 }
 
 void Robot::AplicarTHx(float theta, vector3d d){
