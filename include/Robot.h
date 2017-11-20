@@ -26,7 +26,7 @@ void configurarTH();
 void AplicarTHx(float theta, vector3d d);
 void AplicarTHy(float theta, vector3d d);
 void AplicarTHz(float theta, vector3d d);
-Matrix THx,THy,THz,TH,THbase;
+Matrix THx,THy,THz,TH;
 
 std::vector<Matrix> THList;
 std::vector<vector3d> Origenes;

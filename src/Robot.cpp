@@ -9,7 +9,7 @@ Robot::Robot()
    THz.identity(4);
 int d=4;
   TH.identity(4);
-    THbase.identity(4);
+
   d1={0,0,2.5};
   d2={0,0,6};
   d3={12,0,6};
@@ -148,13 +148,14 @@ void Robot::renderizar(){
 
 
 TH.resetIdentity();
-THbase.resetIdentity();
-modelo3D *model;
 
+modelo3D *model;
+//modelos.size()
 for (int m=0;m<modelos.size();m++){
+        if (m==7){
 model=modelos[m];
 
- TH=TH*THList[2*m+0]*THList[2*m+1];
+ //TH=TH*THList[2*m+0]*THList[2*m+1];
 
 
 vector3d ux,uy,uz,O;
@@ -176,15 +177,15 @@ uy={uy4.aij[0][0],uy4.aij[1][0],uy4.aij[2][0]};
 uz={uz4.aij[0][0],uz4.aij[1][0],uz4.aij[2][0]};
 O={O4.aij[0][0],O4.aij[1][0],O4.aij[2][0]};
 
-
+//if (m<2){
          Drawarrow3D(O,O+4*ux,{1,0.1,0.2},0.03,0.1);
          Drawarrow3D(O,O+4*uy,{.1,1,0.2},0.03,0.1);
          Drawarrow3D(O,O+4*uz,{0.1,0.2,1},0.03,0.1);
+       //  }
          glColor4f(fabs(cos(m*PI/modelos.size())),fabs(sin(20*(m-5)*PI/modelos.size())),0.2,0.5);
- // if (m==1){
+
 glEnable(GL_BLEND);
  glBegin(GL_TRIANGLES);
-
 
   glFrontFace(GL_FRONT_AND_BACK);
     for (int i=0;i<model->ntriangles;i++){
@@ -220,7 +221,7 @@ n.normalize();
         glVertex3f(v3.x,v3.y,v3.z);
     }
 glEnd();
-
+// }
  glDisable(GL_BLEND);
 
 
@@ -228,7 +229,7 @@ glEnd();
 
 
 }
-
+}
 
 }
 
