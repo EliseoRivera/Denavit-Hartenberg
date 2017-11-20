@@ -43,8 +43,8 @@ b1->leer("b1.STL");
 b2->leer("b2.STL");
 b3->leer("b3.STL");
 b4->leer("b4.STL");
-b5->leer("b2.STL");
-b6->leer("b2.STL");
+b5->leer("b5.STL");
+b6->leer("b6.STL");
 gripe->leer("gripe.STL");
 
 
