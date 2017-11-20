@@ -136,7 +136,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
           case 'R':
 
                 Miclase->SSRMS.theta4=Miclase->SSRMS.theta4+dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta4, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta4, {0,0,1});   //b4
                 Miclase->SSRMS.THList[8]=Miclase->SSRMS.THz;
 
 
@@ -145,7 +145,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                      case 'Y':
 
                 Miclase->SSRMS.theta4=Miclase->SSRMS.theta4-dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta4, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta4, {0,0,1});   //b4
                 Miclase->SSRMS.THList[8]=Miclase->SSRMS.THz;
 
 
@@ -155,7 +155,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
           case 'F':
 
                 Miclase->SSRMS.theta5=Miclase->SSRMS.theta5+dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta5, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta5, {0,0,6});    //b5
                 Miclase->SSRMS.THList[10]=Miclase->SSRMS.THz;
 
 
@@ -164,7 +164,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                      case 'H':
 
                 Miclase->SSRMS.theta5=Miclase->SSRMS.theta5-dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta5, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta5, {0,0,6});     //b5
                 Miclase->SSRMS.THList[10]=Miclase->SSRMS.THz;
 
 
@@ -173,22 +173,22 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     case 'V':
 
                 Miclase->SSRMS.theta6=Miclase->SSRMS.theta6+dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta6, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta6, {0,0,6});     //b6
                 Miclase->SSRMS.THList[12]=Miclase->SSRMS.THz;
 
 
                 break;
 
-                     case 'N':
+            case 'N':
 
                 Miclase->SSRMS.theta6=Miclase->SSRMS.theta6-dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta6,{0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta6,{0,0,6});      //b6
                 Miclase->SSRMS.THList[12]=Miclase->SSRMS.THz;
                 break;
                               case 'G':
 
                 Miclase->SSRMS.theta7=Miclase->SSRMS.theta7-dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta7, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta7, {0,0,6});     //b7, efector final
                 Miclase->SSRMS.THList[14]=Miclase->SSRMS.THz;
                 break;
 
@@ -197,14 +197,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
           case 97:
 
                 Miclase->SSRMS.theta1=Miclase->SSRMS.theta1+dtheta;
-                Miclase->SSRMS.AplicarTHz(Miclase->SSRMS.theta1, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(Miclase->SSRMS.theta1, {0,0,2.5});     //b1
                 Miclase->SSRMS.THList[2]=Miclase->SSRMS.THz;
 
                 break;
             case 99:
 
                 Miclase->SSRMS.theta1=Miclase->SSRMS.theta1-dtheta;
-                Miclase->SSRMS.AplicarTHz( Miclase->SSRMS.theta1, {0,0,0});
+                Miclase->SSRMS.AplicarTHz( Miclase->SSRMS.theta1, {0,0,2.5});     //b1
               Miclase->SSRMS.THList[2]=Miclase->SSRMS.THz;
 
 
@@ -213,14 +213,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
              case 100:
 
                 Miclase->SSRMS.theta2=Miclase->SSRMS.theta2+dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta2, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta2, {0,0,6});  //b2
                 Miclase->SSRMS.THList[4]=Miclase->SSRMS.THz;
 
                 break;
             case 102:
 
                 Miclase->SSRMS.theta2=Miclase->SSRMS.theta2-dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta2, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta2, {0,0,6});     //b2
                 Miclase->SSRMS.THList[4]=Miclase->SSRMS.THz;
 
 
@@ -229,14 +229,14 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
          case 103:
 
                 Miclase->SSRMS.theta3=Miclase->SSRMS.theta3+dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta3, {0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta3, {0,0,6});     //b3
                 Miclase->SSRMS.THList[6]=Miclase->SSRMS.THz;
 
                 break;
             case 105:
 
                 Miclase->SSRMS.theta3=Miclase->SSRMS.theta3-dtheta;
-                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta3,{0,0,0});
+                Miclase->SSRMS.AplicarTHz(   Miclase->SSRMS.theta3,{0,0,6});       //b3
                 Miclase->SSRMS.THList[6]=Miclase->SSRMS.THz;
 
                 break;

@@ -10,14 +10,7 @@ Robot::Robot()
 int d=4;
   TH.identity(4);
 
-  d1={0,0,2.5};
-  d2={0,0,6};
-  d3={12,0,6};
-  d4={12,0,1};
-  d5={0,0,6};
-  d6={0,0,6};
-  d7={0,0,0.0};
-    //ctor
+
 }
 
 Robot::~Robot()
@@ -54,42 +47,14 @@ b5->leer("b2.STL");
 b6->leer("b2.STL");
 gripe->leer("gripe.STL");
 
-b1->definirRx(-PI/2.0);
-b1->rotarX();
 
-b2->definirRx(-PI/2.0);
-b2->rotarX();
-b3->definirRz(-PI/2);
-b3->rotarZ();
-b4->definirRz(-PI/2);
-b4->rotarZ();
-
-
-b5->definirRz(-3.14159265);
-b5->rotarZ();
-
-b6->definirRz(-3.14159265);
-b6->rotarZ();
-
-
-
-
-/*
-gripe->definirRx(-3.14159265/2);
-gripe->rotarX();
-*/
 modelos.push_back(base);
 modelos.push_back(b1);
-
 modelos.push_back(b2);
-
 modelos.push_back(b3);
-
 modelos.push_back(b4);
-
 modelos.push_back(b5);
 modelos.push_back(b6);
-
 modelos.push_back(gripe);
 
 }
@@ -99,39 +64,39 @@ THList.push_back(THz);
 AplicarTHx(0,{0,0,0}); //base
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,0}); //b1
+AplicarTHz(0,{0,0,2.5}); //b1
 THList.push_back(THz);
-AplicarTHx(-90,d1); //b1
+AplicarTHx(-90,{0,0,0}); //b1
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,0}); //b2
+AplicarTHz(0,{0,0,6}); //b2
 THList.push_back(THz);
-AplicarTHx(-90,d2); //b2
+AplicarTHx(-90,{0,0,0}); //b2
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,0}); //b3
+AplicarTHz(0,{0,0,6}); //b3
 THList.push_back(THz);
-AplicarTHx(0,d3); //b3
+AplicarTHx(0,{12,0,0}); //b3
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,0}); //b4
+AplicarTHz(0,{0,0,1}); //b4
 THList.push_back(THz);
-AplicarTHz(0,d4); //b4
-THList.push_back(THz);
-
-AplicarTHz(0,{0,0,0}); //b5
-THList.push_back(THz);
-AplicarTHx(-90,d5); //b5
+AplicarTHx(0,{12,0,0}); //b4
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,0}); //b6
+AplicarTHz(0,{0,0,6}); //b5
 THList.push_back(THz);
-AplicarTHx(-90,d6); //b6
+AplicarTHx(-90,{0,0,0}); //b5
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,0}); //gripe
+AplicarTHz(0,{0,0,6}); //b6
 THList.push_back(THz);
-AplicarTHx(0,d7); //gripe
+AplicarTHx(-90,{0,0,0}); //b6
+THList.push_back(THx);
+
+AplicarTHz(0,{0,0,6}); //gripe
+THList.push_back(THz);
+AplicarTHx(0,{0,0,0}); //gripe
 THList.push_back(THx);
 
 }
@@ -141,12 +106,11 @@ void Robot::renderizar(){
 TH.resetIdentity();
 
 modelo3D *model;
-//modelos.size()
-for (int m=0;m<modelos.size();m++){
-        //if (m==7){
-model=modelos[m];
 
- TH=TH* THList[2*m+0]*THList[2*m+1];
+for (int m=0;m<modelos.size();m++){
+
+    model=modelos[m];
+    TH=TH* THList[2*m+0]*THList[2*m+1];
 
 
 vector3d ux,uy,uz,O;
