@@ -94,7 +94,7 @@ THList.push_back(THz);
 AplicarTHx(-90,{0,0,0}); //b6
 THList.push_back(THx);
 
-AplicarTHz(0,{0,0,6}); //gripe
+AplicarTHz(0,{0,0,0.0}); //gripe
 THList.push_back(THz);
 AplicarTHx(0,{0,0,0}); //gripe
 THList.push_back(THx);
